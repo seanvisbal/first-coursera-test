@@ -4,14 +4,14 @@
     angular.module('LunchApp', [])
     .controller('LunchController', LunchController);
 
-    LunchController.$inject = ['$scope', '$filter','$split'];
-    function LunchController($scope, $filter, $split) {
+    LunchController.$inject = ['$scope'];
+    function LunchController($scope) {
         $scope.items = "";
         $scope.message = "";
 
         $scope.checkIfTooMuch = function() {
             // split items by comma and remove any empty or whitespace-only items
-            var itemsArray = $scope.items.$split(",").$filter(function(item) {
+            var itemsArray = $scope.items.split(",").filter(function(item) {
                 return item.trim() !== "";
             });
 
