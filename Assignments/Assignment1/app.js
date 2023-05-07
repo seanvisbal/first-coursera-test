@@ -32,14 +32,3 @@
 
 
 
-
-
-
-
-   // angular.module('LunchApp', [])
-    // .controller('lunchController', LunchController);
-    
-    // LunchController.$inject = ['$scope'];
-    // function LunchController($scope) {
-
-    // }
